@@ -2,7 +2,7 @@
 
 ### Note
 
-This project using...
+This project uses...
 
 1. [browser-sync](https://github.com/browsersync/browser-sync) to launch a local server and do live reloads as sass and pug files changes
 2. [gulp-pug](https://github.com/jamen/gulp-pug) to compile pug files.
