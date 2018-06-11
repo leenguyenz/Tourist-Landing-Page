@@ -1,2 +1,10 @@
-
-
+nav
+	ul.navbar
+		mixin nav-item(name)
+			li.nav-item
+				a.nav-link(href="#")= name
+		+nav-item("about")
+		+nav-item("about")
+		+nav-item("about")
+		+nav-item("about")
+		+nav-item("about")

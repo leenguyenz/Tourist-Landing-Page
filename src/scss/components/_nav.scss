@@ -1,0 +1,28 @@
+.nav-fixed{
+    width: 70px;
+    height: 70px;
+    background-color: lightblue;
+    border-radius: 50%;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    .nav-icon{
+        width: 35px;
+        height: 3px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &:before{
+            @extend .nav-icon;
+            content: '';
+            margin-bottom: 10px;
+        }
+        &:after{
+            @extend .nav-icon;
+            content: '';
+            margin-top: 10px;
+        }
+    }
+}
