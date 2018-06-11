@@ -1,28 +1,54 @@
 .nav-fixed{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     background-color: lightblue;
     border-radius: 50%;
     position: fixed;
     top: 50px;
     right: 50px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    &:hover{
+        .nav-icon::before{
+            top: 13px;
+        }
+        .nav-icon::after{
+            top: -13px;
+        }
+    }
+    &.bar-transform{
+        transition: all 500ms ease;
+        .nav-icon{
+            appearance: none;
+            &:before,&:after{
+                top: 0px;
+            }
+            &:before{
+                transform:rotate(45deg)
+            }
+            &:after{
+                transform:rotate(-45deg)
+            }
+        }
+    }
     .nav-icon{
-        width: 35px;
+        width: 45px;
         height: 3px;
         background: #000;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        &:before{
-            @extend .nav-icon;
+        &:before,&:after{
+            width: 45px;
+            height: 3px;
+            background: #000;
             content: '';
-            margin-bottom: 10px;
+            top: 10px;
+            position: absolute;
         }
         &:after{
-            @extend .nav-icon;
-            content: '';
-            margin-top: 10px;
+            top: -10px;
         }
     }
 }
