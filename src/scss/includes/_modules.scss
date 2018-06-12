@@ -8,3 +8,14 @@
     50% {left: 52%; opacity: 1;}
     100% {left: 45%; opacity: 0;}
 }
+
+.btn{
+    padding: 15px 35px;
+    background: $color-white;
+    outline: none;
+    border-radius: 30px;
+    color: $color-black;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
