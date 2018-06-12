@@ -1,0 +1,25 @@
+.banner{
+    background: url('../../images/hero.jpg') no-repeat center center;
+    width: 100vw;
+    height: 97vh;
+    position: relative;
+    &:before{
+        content: '';
+        width: 100vw;
+        height: 97vh;
+        background-color: $color-green-medium;
+        opacity: 0.8;
+        display: block;
+    }
+    &:after{
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 30vh;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 50px solid #2f2f2f;
+    }
+}
