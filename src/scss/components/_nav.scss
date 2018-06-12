@@ -1,6 +1,6 @@
 .nav-fixed{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: lightblue;
     border-radius: 50%;
     position: fixed;
@@ -19,7 +19,7 @@
     &.bar-transform{
         transition: all 500ms ease;
         .nav-icon{
-            appearance: none;
+            appearance: checkbox;
             &:before,&:after{
                 top: 0px;
             }
@@ -32,7 +32,7 @@
         }
     }
     .nav-icon{
-        width: 45px;
+        width: 40px;
         height: 3px;
         background: #000;
         position: absolute;
@@ -40,7 +40,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
         &:before,&:after{
-            width: 45px;
+            width: 40px;
             height: 3px;
             background: #000;
             content: '';
