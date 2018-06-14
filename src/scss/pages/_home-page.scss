@@ -1,0 +1,112 @@
+//nav fixed
+.nav-fixed{
+    width: 70px;
+    height: 70px;
+    background-color: $color-white;
+    border-radius: 50%;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    z-index: 999;
+    &:hover{
+        .nav-icon::before{
+            top: 12px;
+        }
+        .nav-icon::after{
+            top: -12px;
+        }
+    }
+    &.bar-transform{
+        transition: all 500ms ease;
+        .nav-icon{
+            appearance: checkbox;
+            &:before,&:after{
+                top: 0px;
+            }
+            &:before{
+                transform:rotate(45deg)
+            }
+            &:after{
+                transform:rotate(-45deg)
+            }
+        }
+    }
+    .nav-icon{
+        width: 30px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &:before,&:after{
+            width: 30px;
+            height: 2px;
+            background: #000;
+            content: '';
+            top: 8px;
+            position: absolute;
+        }
+        &:after{
+            top: -8px;
+        }
+    }
+}
+
+//banner
+.banner{
+    background: url('../../images/hero.jpg') no-repeat center center;
+    width: 98vw;
+    height: 98vh;
+    position: relative;
+    &:before{
+        content: '';
+        width: 98vw;
+        height: 98vh;
+        background-color: $color-green-medium;
+        opacity: 0.8;
+        display: block;
+    }
+    // &:after{
+    //     content:'';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100vw;
+    //     height: 30vh;
+    //     border-left: 50px solid transparent;
+    //     border-right: 50px solid transparent;
+    //     border-top: 50px solid #2f2f2f;
+    // }
+    .logo-brand{
+        width: 80px;
+        position: absolute;
+        top: 60px;
+        left: 30px;
+        img{
+            width: 100%;
+        }
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        right: 10%;
+        transform: translateY(-50%);
+        color:$color-white;
+        text-align: center;
+        letter-spacing: 15px;
+        text-transform: uppercase;
+        &--title{
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+        &--desc{
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+    }
+}
