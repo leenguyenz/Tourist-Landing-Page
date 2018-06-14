@@ -25,10 +25,11 @@
     &:focus{
         outline: none;
     }
-    &:after{
+    &.btn-effect:after{
         content:'';
         @extend .btn;
         position: absolute;
+        background: red;
         top: 0;
         left: 0;
         width: 100%;

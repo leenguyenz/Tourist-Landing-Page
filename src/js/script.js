@@ -4,8 +4,11 @@ $('.nav-fixed').on("click", function(){
 })
 
 $('.btn').mouseover(function(){
-    $('.btn:after').animate({
-        transform: scale(1.5),
-        opacity:1
+    $(this).addClass('btn-effect').animate({
+        scale: 1.5,
+        opacity: 1
     },500)
-})
+});
+$('.btn').mouseout(function(){
+    $(this).removeClass('btn-effect');
+});
