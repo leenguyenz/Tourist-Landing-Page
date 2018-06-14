@@ -1,14 +1,29 @@
-$('.nav-fixed').on("click", function(){
-    $(this).toggleClass('bar-transform');
-    $('nav').toggleClass('nav-block');
-})
+$( document ).ready(function() {
+    $('.nav-fixed').on("click", function(){
+        $(this).toggleClass('bar-transform');
+        $('nav').toggleClass('nav-block');
+    })
 
-$('.btn').mouseover(function(){
-    $(this).addClass('btn-effect').animate({
-        scale: 1.5,
-        opacity: 1
-    },500)
-});
+    $.keyframe.define({
+        name: 'button-effect',
+        from: {
+            'transform':'scale(1)'
+        },
+        to: {
+            'transform':'scale(1.5)'
+        }
+    });
+
+    $('.btn').mouseover(function(){
+        $(this).addClass('btn-effect');
+        // $('.btn-effect').playKeyframe({
+        //     name: 'button-effect',
+        //     duration: '700ms'
+        // })
+    });
 $('.btn').mouseout(function(){
     $(this).removeClass('btn-effect');
 });
+});
+
+

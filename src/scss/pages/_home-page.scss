@@ -58,28 +58,26 @@
 //banner
 .banner{
     background: url('../../images/hero.jpg') no-repeat center center;
-    width: 98vw;
-    height: 98vh;
+    width: 97vw;
+    height: 97vh;
     position: relative;
     &:before{
         content: '';
-        width: 98vw;
-        height: 98vh;
+        width: 97vw;
+        height: 97vh;
         background-color: $color-green-medium;
         opacity: 0.8;
         display: block;
     }
-    // &:after{
-    //     content:'';
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     width: 100vw;
-    //     height: 30vh;
-    //     border-left: 50px solid transparent;
-    //     border-right: 50px solid transparent;
-    //     border-top: 50px solid #2f2f2f;
-    // }
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 100px solid $bg-gray;
+        border-left: 1242px solid transparent;
+    }
     .logo-brand{
         width: 80px;
         position: absolute;
@@ -102,11 +100,17 @@
         &--title{
             font-size: 3.5rem;
             text-transform: uppercase;
+            animation: title 1s ease-in-out;
         }
         &--desc{
             font-size: 2rem;
             text-transform: uppercase;
             margin-bottom: 40px;
+            animation: desc 1s ease-in-out;
+        }
+        button{
+            animation: button 1s ease-in-out;
+            animation-delay: 800ms;
         }
     }
 }
