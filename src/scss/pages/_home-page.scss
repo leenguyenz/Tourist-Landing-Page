@@ -57,60 +57,53 @@
 
 //banner
 .banner{
-    background: url('../../images/hero.jpg') no-repeat center center;
-    width: 97vw;
-    height: 97vh;
+    background-image:linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),rgba(40, 180, 133, 0.164)),
+        url('../../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 95vh;
     position: relative;
-    &:before{
-        content: '';
-        width: 97vw;
-        height: 97vh;
-        background-color: $color-green-medium;
-        opacity: 0.8;
-        display: block;
-    }
-    &:after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-bottom: 100px solid $bg-gray;
-        border-left: 1242px solid transparent;
-    }
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     .logo-brand{
         width: 80px;
         position: absolute;
-        top: 60px;
-        left: 30px;
+        top: 40px;
+        left: 40px;
         img{
             width: 100%;
         }
     }
-    &__caption{
+    .text-box{
         position: absolute;
-        top: 50%;
-        left: 10%;
-        right: 10%;
-        transform: translateY(-50%);
-        color:$color-white;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         text-align: center;
-        letter-spacing: 15px;
-        text-transform: uppercase;
-        &--title{
-            font-size: 3.5rem;
+        .banner__caption{
+            color: $color-white;
             text-transform: uppercase;
-            animation: title 1s ease-in-out;
-        }
-        &--desc{
-            font-size: 2rem;
-            text-transform: uppercase;
+            backface-visibility: hidden;
             margin-bottom: 40px;
-            animation: desc 1s ease-in-out;
+            &__main{
+            font-size: 4.5rem;
+            animation: title 2s ease-in-out;
+            display: block;
+            letter-spacing: 35px;
+            font-weight: 400;
+            }
+            &__sub{
+                font-size: 1.8rem;
+                display: block;
+                animation: desc 2s ease-in-out;
+                letter-spacing: 14px;
+            }
         }
-        button{
-            animation: button 1s ease-in-out;
-            animation-delay: 800ms;
+        .btn-animation-top{
+            animation: button 1s ease-in-out 1.2s;
+            animation-fill-mode:backwards;
         }
     }
 }
