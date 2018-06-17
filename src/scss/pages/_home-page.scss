@@ -1,21 +1,21 @@
 //nav fixed
 .nav-fixed{
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     background-color: $color-white;
     border-radius: 50%;
     position: fixed;
-    top: 50px;
-    right: 50px;
+    top: 5rem;
+    right: 5rem;
     cursor: pointer;
     transition: all 500ms ease;
     z-index: 999;
     &:hover{
         .nav-icon::before{
-            top: 12px;
+            top: 1.2rem;
         }
         .nav-icon::after{
-            top: -12px;
+            top: -1.2rem;
         }
     }
     &.bar-transform{
@@ -23,7 +23,7 @@
         .nav-icon{
             appearance: checkbox;
             &:before,&:after{
-                top: 0px;
+                top: 0;
             }
             &:before{
                 transform:rotate(45deg)
@@ -34,23 +34,23 @@
         }
     }
     .nav-icon{
-        width: 30px;
-        height: 2px;
+        width: 3rem;
+        height: 0.2rem;
         background: #000;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
         &:before,&:after{
-            width: 30px;
-            height: 2px;
+            width: 3rem;
+            height: 0.2rem;
             background: #000;
             content: '';
-            top: 8px;
+            top: 0.8rem;
             position: absolute;
         }
         &:after{
-            top: -8px;
+            top: -0.8rem;
         }
     }
 }
@@ -68,10 +68,10 @@
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     .logo-brand{
-        width: 80px;
+        width: 8rem;
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: 4rem;
+        left: 4rem;
         img{
             width: 100%;
         }
@@ -86,19 +86,19 @@
             color: $color-white;
             text-transform: uppercase;
             backface-visibility: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 4rem;
             &__main{
             font-size: 4.5rem;
             animation: title 2s ease-in-out;
             display: block;
-            letter-spacing: 35px;
+            letter-spacing: 3.5rem;
             font-weight: 400;
             }
             &__sub{
                 font-size: 1.8rem;
                 display: block;
                 animation: desc 2s ease-in-out;
-                letter-spacing: 14px;
+                letter-spacing: 1.4rem;
             }
         }
         .btn-animation-top{

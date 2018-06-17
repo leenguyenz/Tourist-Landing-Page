@@ -3,17 +3,21 @@
 *:after{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
+}
+html{
+	font-size: 62.5%;
 }
 body{
 	outline: none;
 	font-family:$font-body;
 	font-weight: 400;
 	color: $color-main;
-	font-size: 62.5%;
+	font-size: $font-size-main;
 	line-height: $line-height-main;
 	text-decoration: none;
-	padding: 15px;
+	padding: 1.5rem;
+	box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6{
 	text-transform: capitalize;
