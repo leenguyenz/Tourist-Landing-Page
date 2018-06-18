@@ -67,7 +67,7 @@
     height: 95vh;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    .logo-brand{
+    &__logo{
         width: 8rem;
         position: absolute;
         top: 4rem;
@@ -76,7 +76,7 @@
             width: 100%;
         }
     }
-    .text-box{
+    &__text-box{
         position: absolute;
         top: 40%;
         left: 50%;
@@ -87,21 +87,21 @@
             text-transform: uppercase;
             backface-visibility: hidden;
             margin-bottom: 4rem;
-            &__main{
+            &--main{
             font-size: 4.5rem;
             animation: title 2s ease-in-out;
             display: block;
             letter-spacing: 3.5rem;
             font-weight: 400;
             }
-            &__sub{
+            &--sub{
                 font-size: 1.8rem;
                 display: block;
                 animation: desc 2s ease-in-out;
                 letter-spacing: 1.4rem;
             }
         }
-        .btn-animation-top{
+        .btn--animation--top{
             animation: button 1s ease-in-out 1.2s;
             animation-fill-mode:backwards;
         }
