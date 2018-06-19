@@ -16,3 +16,24 @@
 	font-family:lato_light;
     src:url('../../fonts/Lato-Light.ttf');
 }
+
+//style heading
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 4rem;
+    &--main{
+        font-size: 4.5rem;
+        animation: title 2s ease-in-out;
+        display: block;
+        letter-spacing: 3.5rem;
+        font-weight: 400;
+    }
+    &--sub{
+        font-size: 1.8rem;
+        display: block;
+        animation: desc 2s ease-in-out;
+        letter-spacing: 1.4rem;
+    }
+}

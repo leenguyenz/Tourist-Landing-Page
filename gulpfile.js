@@ -59,7 +59,7 @@ gulp.task('pug', function () {
  * need for vendor prefixes then live reload the browser.
  */
 gulp.task('sass', function(){
-	return gulp.src(paths.sass + 'style.scss')
+	return gulp.src(paths.sass + 'main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			includePaths: [paths.sass],

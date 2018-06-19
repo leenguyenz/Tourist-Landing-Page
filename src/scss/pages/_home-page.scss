@@ -59,7 +59,7 @@
 .banner{
     background-image:linear-gradient(
         to right bottom,
-        rgba(126, 213, 111, 0.8),rgba(40, 180, 133, 0.164)),
+        rgba(20, 20, 20, 0.9),rgba(40, 180, 133, 0.164)),
         url('../../images/hero.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -82,28 +82,5 @@
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: center;
-        .banner__caption{
-            color: $color-white;
-            text-transform: uppercase;
-            backface-visibility: hidden;
-            margin-bottom: 4rem;
-            &--main{
-            font-size: 4.5rem;
-            animation: title 2s ease-in-out;
-            display: block;
-            letter-spacing: 3.5rem;
-            font-weight: 400;
-            }
-            &--sub{
-                font-size: 1.8rem;
-                display: block;
-                animation: desc 2s ease-in-out;
-                letter-spacing: 1.4rem;
-            }
-        }
-        .btn--animation--top{
-            animation: button 1s ease-in-out 1.2s;
-            animation-fill-mode:backwards;
-        }
     }
 }
