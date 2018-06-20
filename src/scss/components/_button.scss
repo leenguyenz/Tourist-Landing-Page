@@ -37,9 +37,24 @@
         }
     }
 }
+
+.btn-outline{
+    cursor: pointer;
+    padding:5px;
+    border-bottom: 1px solid $color-green-medium;
+    transition: all 300ms ease-in-out;
+    display: inline-block;
+    &:hover{
+        background: $color-green-medium;
+        color: $color-white!important;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        transform: translateY(-2px);
+    }
+}
+
 .btn--primary{
 	background: $color-white;
-	color: $color-main;
+    color: $color-main;
 }
 
 .btn--top{
