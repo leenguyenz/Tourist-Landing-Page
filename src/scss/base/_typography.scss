@@ -62,3 +62,12 @@
         margin-bottom: 3rem;
     }
 }
+
+.text-icon{
+    font-size: 8rem;
+    i{
+        background: linear-gradient(to right bottom,$color-green-light,$color-green-dark);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
