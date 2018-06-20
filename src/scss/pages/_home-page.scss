@@ -88,39 +88,4 @@
 .adventure{
     background-color: $bg-gray;
     padding: 5rem 0;
-    &__slide{
-        position: relative;
-        &__item{
-            width: 55%;
-            position: absolute;
-            box-shadow: 0 1rem 2rem rgba($color-black, .2);
-            border-radius: 0.2rem;
-            transition: all 300ms ease-in-out;
-            outline-offset: 1rem;
-            img{
-                width: 100%;
-                height: 100%;
-                display: block;
-            }
-            &:first-child{
-                top: -2rem;
-                left: 0;
-            }
-            &:nth-child(2){
-                top: 2rem;
-                right: 0;
-            }
-            &:last-child{
-                top: 10rem;
-                left: 20%;
-            }
-            &:hover{
-                z-index: 20;
-                border-color: $color-green-dark;
-                transform: scale(1.1);
-                outline: 1rem solid $color-green-dark;
-                box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-            }
-        }
-    }
 }
