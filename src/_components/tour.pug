@@ -27,6 +27,18 @@ section.adventure
             .composition__item
                 img(src="../images/nat-3.jpg", alt="nat3")
 section.benefits
+    mixin card(icon,title)
+        .benefits__card
+            .card-icon
+                = icon
+            h3.heading-sub= title
+            p.paragraph= dummy
+    +card(i.fa.fa-global,"123123123")
+    +card(i.fa.fa-heart,"123123123")
+            
+        
+    
+
 section.popular
 section.testimonial
 section.booking
