@@ -66,7 +66,7 @@
     background-size: cover;
     height: 95vh;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     &__logo{
         width: 8rem;
         position: absolute;
@@ -87,5 +87,6 @@
 
 .adventure{
     background-color: $bg-gray;
-    padding: 5rem 0;
+    padding: 20rem 0;
+    margin-top: -15vh;
 }
