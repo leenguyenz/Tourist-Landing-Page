@@ -28,33 +28,32 @@ section.adventure
                 img(src="../images/nat-3.jpg", alt="nat3")
 section.benefits
     mixin benefits-block(args)
-        .benefits__card.text-center
-            .text-icon
-                i(class=args.icon)
+        .benefits-card.text-center
+            i(class=args.icon)
             h3.heading-sub.pb-1= args.title || "Title default"
             p.paragraph= args.desc || "Lorem ipsum dolor sit amet"
-    .row.box-caption
+    .row
         .col-1-of-4
             +benefits-block({
-                icon: "fa fa-globe",
+                icon: "icon-basic-world",
                 title: "Beatae eum facilis",
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })
         .col-1-of-4
             +benefits-block({
-                icon: "fa fa-compass",
+                icon: "icon-basic-compass",
                 title: "Beatae eum facilis",
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })
         .col-1-of-4
             +benefits-block({
-                icon: "fa fa fa-map-o",
+                icon: "icon-basic-map",
                 title: "Beatae eum facilis",
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })
         .col-1-of-4
             +benefits-block({
-                icon: "fa fa-heart-o",
+                icon: "icon-basic-heart",
                 title: "Beatae eum facilis",
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })

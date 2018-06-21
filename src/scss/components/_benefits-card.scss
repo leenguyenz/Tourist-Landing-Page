@@ -1,0 +1,18 @@
+.benefits-card{
+    background: rgba($color-white,0.7);
+    border-radius: 0.5rem;
+    padding:2rem;
+    transition: transform .3s ease;
+    box-shadow: 0 2em 4em rgba($color-black, .2);
+    i{
+        background: linear-gradient(to right bottom,$color-green-light,$color-green-dark);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 6rem;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+    &:hover{
+        transform: scale(1.02) translateY(-1em);
+    }
+}

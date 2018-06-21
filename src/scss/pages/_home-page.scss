@@ -92,28 +92,18 @@
 }
 
 .benefits{
-    background-image:linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.3)) ,url(../../images/nat-4.jpg);
+    background-image:linear-gradient(
+        to right bottom,
+        rgba(20, 20, 20, 0.9),rgba(40, 180, 133, 0.164)),
+        url('../../images/nat-4.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100% );
-    margin-top: -15vh;
-    position: relative;
-    .box-caption{
-        position: absolute;
-        top: 50%;
-        left: $gutter-horizontal;
-        transform: translate(0,-50%);
-    }
-    &__card{
-        background: rgba($color-white,0.7);
-        border-radius: 0.5rem;
-        padding:2rem;
-        transition: all .3s ease;
-        box-shadow: 0 1em 2em rgba($color-black, .2);
-        &:hover{
-            transform: scale(1.02) translateY(-1em);
-        }
+    // clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100% );
+    margin-top: -10rem;
+    padding: 20rem 0;
+    transform: skewY(-7deg);
+    & > * {
+        transform: skewY(7deg);
     }
 }
