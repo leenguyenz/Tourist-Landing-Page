@@ -1,48 +1,132 @@
-.popular-card{
+.card{
     position: relative;
-    box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
-    &__heading{
-        background-image: linear-gradient(
-            to right bottom,
-            rgba(20, 20, 20, 0.9),rgba(40, 180, 133, 0.2)),
-            url('../../images/nat-5.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        height: 30vh;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        z-index: 1;
-    }
-    &__title{
-        text-align: right;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    height: 50rem;
+    &__side{
         position: absolute;
-        top: 15rem;
-        right: 1rem;
-        z-index: 2;
-        letter-spacing: .3rem;
-        span{
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 2rem;
-            color: $color-white;
-            background: linear-gradient(
-                to right bottom,
-                rgba($color-green-light, 0.9),rgba($color-green-dark, 0.5));
-            padding:3px 10px;
-            &:last-child{
-                margin-top: -1rem;
-            }
+        top: 0;
+        left: 0;
+        height: 50rem;
+        transition: all 0.8s ease;
+        font-size: 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        width: 100%;
+        &--front{
+            background-color: orangered;
+        }
+        &--back{
+            background-color: green;
+            transform: rotateY(-180deg);
         }
     }
-    &__content{
-        text-align: center;
-        padding: 2rem;
-        ul{
-            list-style: none;
-            li{
-                padding-bottom: 2rem;
-            } 
-        }
 
+    &:hover &__side--front{
+        transform: rotateY(180deg);
     }
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    // position: relative;
+    // height: 60rem;
+    // box-shadow: 0 0 1rem .5rem rgba($color-black, .3);
+    // transition: all .8s ease;
+    // perspective: 150rem;
+    // -moz-perspective: 150rem;
+    // &:hover{
+    //     transform: rotateY(180deg);
+    // }
+    // .card-front{
+    //     transform: rotateY(0deg);
+    //     position: absolute;
+    //     top: 0;
+    //     &__heading{
+    //         background-repeat: no-repeat;
+    //         background-position: center center;
+    //         background-size: cover;
+    //         width: 35rem;
+    //         height: 35vh;
+    //         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    //         z-index: 1;
+    //         &.bg-heading-1{
+    //             background-image: linear-gradient(
+    //             to right bottom,
+    //             rgba(20, 20, 20, 0.9),rgba(40, 180, 133, 0.2)),
+    //             url('../../images/nat-5.jpg');
+    //         };
+    //         &.bg-heading-2{
+    //             background-image: linear-gradient(
+    //             to right bottom,
+    //             rgba(53, 175, 149, 0.8),rgba(40, 94, 76, 0.308)),
+    //             url('../../images/nat-6.jpg');
+    //         };
+    //         &.bg-heading-3{
+    //             background-image: linear-gradient(
+    //             to right bottom,
+    //             rgba(50, 95, 56, 0.9),rgba(36, 51, 46, 0.2)),
+    //             url('../../images/nat-7.jpg');
+    //         };
+    //     }
+    //     &__title{
+    //         text-align: right;
+    //         position: absolute;
+    //         top: 20rem;
+    //         right: 1rem;
+    //         z-index: 2;
+    //         letter-spacing: .3rem;
+    //         span{
+    //             display: inline-block;
+    //             text-transform: uppercase;
+    //             font-size: 2rem;
+    //             color: $color-white;
+    //             background: linear-gradient(
+    //                 to right bottom,
+    //                 rgba($color-green-light, 0.9),rgba($color-green-dark, 0.5));
+    //             padding:.3rem 1rem;
+    //             &:last-child{
+    //                 margin-top: -1rem;
+    //             }
+    //         }
+    //     }
+    //     &__content{
+    //         text-align: center;
+    //         padding: 2rem;
+    //         ul{
+    //             list-style: none;
+    //             li{
+    //                 padding-bottom: 2rem;
+    //             } 
+    //         }
+    //     }
+    // }
+
+    // .card-back{
+    //     width: 100%;
+    //     height: 60rem;
+    //     position: absolute;
+    //     top: 0;
+    //     text-align: center;
+    //     background-image: linear-gradient(
+    //         to right bottom,
+    //         rgba(orange, 0.3),rgba(orangered, 0.7));
+    //     padding: 2rem;
+    //     transform: rotateY(-180deg);
+    //     backface-visibility: hidden;
+    //     &__text{
+    //         color: $color-white;
+    //         font-weight: 700;
+    //         font-size: 1.8rem;
+    //         text-transform: uppercase;
+    //         padding-top: 8rem;
+    //     }
+    //     &__price{
+    //         color: $color-white;
+    //         font-size: 5rem;
+    //         padding-top: 2rem;
+    //         margin-bottom: 10rem;
+    //     }
+    // }
 }

@@ -58,52 +58,47 @@ section.benefits
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })
 section.popular
-    mixin card-block(args)
-        .popular-card
-            .popular-card__heading
-            .popular-card__title
-                span= args.title1
-                br
-                span= args.title2
-            .popular-card__content
-                ul
-                    li= args.content1 
-                    li= args.content2 
-                    li= args.content3 
-                    li= args.content4 
-                    li= args.content5 
+    mixin card
+        .card
+            .card__side.card__side--front text
+            .card__side.card__side--back text
+        //- .card
+        //-     .card-front
+        //-         .card-front__heading(class=args.bg)
+        //-         h4.card-front__title
+        //-             span= args.title1
+        //-             br
+        //-             span= args.title2
+        //-         .card-front__content
+        //-             ul
+        //-                 li= args.content1 
+        //-                 li= args.content2 
+        //-                 li= args.content3 
+        //-                 li= args.content4 
+        //-                 li= args.content5
+        //-     .card-back
+        //-         .card-back__text
+        //-             span Only
+        //-         .card-back__price
+        //-             span= args.price
+        //-         button.btn.btn--primary Book now!
     h2.heading-secondary.text-center.pb-5 MOST POPULAR TOURS
     .row
         .col-1-of-3
-            +card-block({
-                title1: "the sea",
-                title2: "explorer",
-                content1: "Lorem ipsum dolor",
-                content2: "Lorem ipsum dolor",
-                content3: "Lorem ipsum dolor",
-                content4: "Lorem ipsum dolor",
-                content5: "Lorem ipsum dolor"
-            })
-        .col-1-of-3
-            +card-block({
-                title1: "the sea",
-                title2: "explorer",
-                content1: "Lorem ipsum dolor",
-                content2: "Lorem ipsum dolor",
-                content3: "Lorem ipsum dolor",
-                content4: "Lorem ipsum dolor",
-                content5: "Lorem ipsum dolor"
-            })
-        .col-1-of-3
-            +card-block({
-                title1: "the sea",
-                title2: "explorer",
-                content1: "Lorem ipsum dolor",
-                content2: "Lorem ipsum dolor",
-                content3: "Lorem ipsum dolor",
-                content4: "Lorem ipsum dolor",
-                content5: "Lorem ipsum dolor"
-            })
+            +card
+    //- .row
+    //-     .col-1-of-3
+    //-         +card-block({
+    //-             bg: "bg-heading-1",
+    //-             title1: "the sea",
+    //-             title2: "explorer",
+    //-             content1: "Lorem ipsum dolor",
+    //-             content2: "Lorem ipsum dolor",
+    //-             content3: "Lorem ipsum dolor",
+    //-             content4: "Lorem ipsum dolor",
+    //-             content5: "Lorem ipsum dolor",
+    //-             price: "$297"
+    //-         })
         
 section.testimonial
 section.booking

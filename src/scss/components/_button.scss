@@ -11,11 +11,11 @@
         outline: none;
     }
     &:hover{
-        transform: translateY(-3px);
+        transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
     }
     &:active{
-        transform: translateY(-1px);
+        transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 0.5rem rgba($color-black, .2);
     }
     &:after{
@@ -40,7 +40,7 @@
 
 .btn-outline{
     cursor: pointer;
-    padding:5px;
+    padding:.5rem;
     border-bottom: 1px solid $color-green-medium;
     transition: all 300ms ease-in-out;
     display: inline-block;
@@ -48,7 +48,7 @@
         background: $color-green-medium;
         color: $color-white!important;
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
-        transform: translateY(-2px);
+        transform: translateY(-.2rem);
     }
 }
 
