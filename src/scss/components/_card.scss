@@ -1,0 +1,48 @@
+.popular-card{
+    position: relative;
+    box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
+    &__heading{
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(20, 20, 20, 0.9),rgba(40, 180, 133, 0.2)),
+            url('../../images/nat-5.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 30vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        z-index: 1;
+    }
+    &__title{
+        text-align: right;
+        position: absolute;
+        top: 15rem;
+        right: 1rem;
+        z-index: 2;
+        letter-spacing: .3rem;
+        span{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: $color-white;
+            background: linear-gradient(
+                to right bottom,
+                rgba($color-green-light, 0.9),rgba($color-green-dark, 0.5));
+            padding:3px 10px;
+            &:last-child{
+                margin-top: -1rem;
+            }
+        }
+    }
+    &__content{
+        text-align: center;
+        padding: 2rem;
+        ul{
+            list-style: none;
+            li{
+                padding-bottom: 2rem;
+            } 
+        }
+
+    }
+}
