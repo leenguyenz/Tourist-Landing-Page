@@ -111,6 +111,7 @@
         border-radius: 0.5rem;
         padding:2rem;
         transition: all .3s ease;
+        box-shadow: 0 1em 2em rgba($color-black, .2);
         &:hover{
             transform: scale(1.02) translateY(-1em);
         }
