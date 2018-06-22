@@ -22,7 +22,6 @@
         content:'';
         @extend .btn;
         position: absolute;
-        background: $color-white;
         top: 0;
         left: 0;
         width: 100%;
@@ -55,8 +54,17 @@
 .btn--primary{
 	background: $color-white;
     color: $color-main;
+    &:after{
+        background: $color-white;
+    }
 }
-
+.btn--success{
+	background: $color-green-light;
+    color: $color-white;
+    &:after{
+        background: $color-green-light;
+    }
+}
 .btn--top{
     animation: button 1s ease-in-out 1.2s;
     animation-fill-mode:backwards;

@@ -58,47 +58,69 @@ section.benefits
                 desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur."
             })
 section.popular
-    mixin card
+    mixin card(args)
         .card
-            .card__side.card__side--front text
-            .card__side.card__side--back text
-        //- .card
-        //-     .card-front
-        //-         .card-front__heading(class=args.bg)
-        //-         h4.card-front__title
-        //-             span= args.title1
-        //-             br
-        //-             span= args.title2
-        //-         .card-front__content
-        //-             ul
-        //-                 li= args.content1 
-        //-                 li= args.content2 
-        //-                 li= args.content3 
-        //-                 li= args.content4 
-        //-                 li= args.content5
-        //-     .card-back
-        //-         .card-back__text
-        //-             span Only
-        //-         .card-back__price
-        //-             span= args.price
-        //-         button.btn.btn--primary Book now!
+            .card__side.card__side--front
+                .card__side__heading(class=args.heading)
+                h4.card__side__title
+                    span.card__side__title-span(class=args.sub)= args.title
+                .card__side__content
+                    ul
+                        li= args.content1
+                        li= args.content2
+                        li= args.content3
+                        li= args.content4
+                        li= args.content5
+            .card__side.card__side--back.text-center(class=args.back)
+                .card__side__text
+                    span Only
+                .card__side__price
+                    span= args.price
+                button.btn.btn--primary Book now!
     h2.heading-secondary.text-center.pb-5 MOST POPULAR TOURS
     .row
         .col-1-of-3
-            +card
-    //- .row
-    //-     .col-1-of-3
-    //-         +card-block({
-    //-             bg: "bg-heading-1",
-    //-             title1: "the sea",
-    //-             title2: "explorer",
-    //-             content1: "Lorem ipsum dolor",
-    //-             content2: "Lorem ipsum dolor",
-    //-             content3: "Lorem ipsum dolor",
-    //-             content4: "Lorem ipsum dolor",
-    //-             content5: "Lorem ipsum dolor",
-    //-             price: "$297"
-    //-         })
+            +card({
+                heading: "card__side__heading--1",
+                sub: "card__side__title-span--1",
+                title: "The sea explorer",
+                back: "card__side--back--1",
+                content1: "Lorem ipsum dolor",
+                content2: "Lorem ipsum dolor",
+                content3: "Lorem ipsum dolor",
+                content4: "Lorem ipsum dolor",
+                content5: "Lorem ipsum dolor",
+                price: "297$"
+            })
+        .col-1-of-3
+            +card({
+                heading: "card__side__heading--2",
+                sub: "card__side__title-span--2",
+                title: "The sea explorer",                
+                back: "card__side--back--2",
+                content1: "Lorem ipsum dolor",
+                content2: "Lorem ipsum dolor",
+                content3: "Lorem ipsum dolor",
+                content4: "Lorem ipsum dolor",
+                content5: "Lorem ipsum dolor",
+                price: "385$"
+            })
+        .col-1-of-3
+            +card({
+                heading: "card__side__heading--3",
+                sub: "card__side__title-span--3",
+                title: "The sea explorer",                
+                back: "card__side--back--3",
+                content1: "Lorem ipsum dolor",
+                content2: "Lorem ipsum dolor",
+                content3: "Lorem ipsum dolor",
+                content4: "Lorem ipsum dolor",
+                content5: "Lorem ipsum dolor",
+                price: "115$"
+            })
+    .row
+        .card__footer.text-center.mt-3
+            button.btn.btn--success Discover all tours
         
 section.testimonial
 section.booking
