@@ -120,7 +120,19 @@ section.popular
             })
     .row
         .card__footer.text-center.mt-3
-            button.btn.btn--success Discover all tours
-        
-section.testimonial
+            button.btn.btn--success Discover all tours     
+section.quote
+    mixin quote-box(args)
+        .quote__box
+            .quote__box__image
+                img(src=args.link, alt=args.alt)
+            .heading-sub= args.heading || "Heading default"
+            .paragraph= args.paragraph || "Paragraph default"
+    h2.heading-secondary.text-center WE MAKE PEOPLE GENUINELY HAPPY
+    +quote-box({
+        link: "../images/nat-8.jpg",
+        alt: "images quote 1",
+        heading: "Beatae eum facilis nostrum recusandae",
+        paragraph: "ipsum dolor sit amet consectetur adipisicing elit. Beatae eum facilis nostrum recusandae cupiditate ipsam hic! Dolor sed vero id unde doloremque cum ipsa. Accusantium ipsa vitae culpa laudantium iste!"
+    })
 section.booking
