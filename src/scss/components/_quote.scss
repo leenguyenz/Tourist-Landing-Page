@@ -1,16 +1,59 @@
 .quote__box{
-    width: 80%;
-    background: $color-main;
+    width: 70%;
+    background: $color-green-light;
     margin: 0 auto;
+    @include clear-fix;
+    padding: 3rem;
+    transform: skewX(-12deg);
+    & > *{
+        transform: skewX(12deg);
+    }
     &__image{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        float: left;
+        margin: 2rem;
+        text-align: center;
         overflow: hidden;
         img{
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            transform: scale(1.3);
+            width: 400px;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            margin-top: -74%;
+            margin-left: -109%;
+            transition: all 500ms ease;
+        }
+        &__name{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all 500ms ease;
+            opacity: 0;
+            backface-visibility: hidden;
+        }
+        // &--1{
+        //     background-image:url('../../images/nat-8.jpg');
+        // }
+    }
+    &:hover{
+        .quote__box__image{
+            img{
+                transform: scale(0.7);
+                filter: blur(4px);
+            }
+        }
+        .quote__box__image__name{
+            top: 50%;
+            opacity: 1;
         }
     }
 }

@@ -124,15 +124,16 @@ section.popular
 section.quote
     mixin quote-box(args)
         .quote__box
-            .quote__box__image
-                img(src=args.link, alt=args.alt)
-            .heading-sub= args.heading || "Heading default"
-            .paragraph= args.paragraph || "Paragraph default"
-    h2.heading-secondary.text-center WE MAKE PEOPLE GENUINELY HAPPY
-    +quote-box({
-        link: "../images/nat-8.jpg",
-        alt: "images quote 1",
-        heading: "Beatae eum facilis nostrum recusandae",
-        paragraph: "ipsum dolor sit amet consectetur adipisicing elit. Beatae eum facilis nostrum recusandae cupiditate ipsam hic! Dolor sed vero id unde doloremque cum ipsa. Accusantium ipsa vitae culpa laudantium iste!"
-    })
+            .quote__box__image.quote__box__image--1
+                img(src="../../images/nat-8.jpg", alt="")
+                .quote__box__image__name= args.name
+            .heading-sub.mt-3= args.heading || "Heading default"
+            .paragraph.mt-1= args.paragraph || "Paragraph default"
+    video(src="")
+        h2.heading-secondary.text-center.pb-5 WE MAKE PEOPLE GENUINELY HAPPY
+        +quote-box({
+            name: "Mary smith",
+            heading: "I HAD THE BEST WEEK EVER WITH MY FAMILY",
+            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui."
+        })
 section.booking
