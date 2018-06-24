@@ -1,57 +1,51 @@
 .quote__box{
     width: 70%;
-    background: $color-green-light;
-    margin: 0 auto;
+    background: rgba($color-white, 0.9);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    margin:0 auto;
     @include clear-fix;
     padding: 3rem;
     transform: skewX(-12deg);
+    margin-bottom: 4rem;
     & > *{
         transform: skewX(12deg);
     }
     &__image{
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        width: 18rem;
+        height: 18rem;
+        clip-path: circle(50%);
         float: left;
+        shape-outside: circle(45%);
         margin: 2rem;
         text-align: center;
         overflow: hidden;
         img{
-            width: 400px;
-            left: 50%;
-            top: 50%;
-            position: absolute;
-            margin-top: -74%;
-            margin-left: -109%;
+            height: 100%;
             transition: all 500ms ease;
+            transform: translateX(-4rem) scale(1.4);
         }
-        &__name{
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 2.3rem;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            transition: all 500ms ease;
-            opacity: 0;
-            backface-visibility: hidden;
-        }
-        // &--1{
-        //     background-image:url('../../images/nat-8.jpg');
-        // }
+    }
+    &__caption{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: all 500ms ease;
+        opacity: 0;
+        backface-visibility: hidden;
     }
     &:hover{
         .quote__box__image{
             img{
-                transform: scale(0.7);
-                filter: blur(4px);
+                transform: translateX(-4rem) scale(1);
+                filter: blur(3px) brightness(70%);
             }
         }
-        .quote__box__image__name{
+        .quote__box__caption{
             top: 50%;
             opacity: 1;
         }

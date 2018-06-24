@@ -124,16 +124,31 @@ section.popular
 section.quote
     mixin quote-box(args)
         .quote__box
-            .quote__box__image.quote__box__image--1
-                img(src="../../images/nat-8.jpg", alt="")
-                .quote__box__image__name= args.name
-            .heading-sub.mt-3= args.heading || "Heading default"
-            .paragraph.mt-1= args.paragraph || "Paragraph default"
-    video(src="")
-        h2.heading-secondary.text-center.pb-5 WE MAKE PEOPLE GENUINELY HAPPY
-        +quote-box({
-            name: "Mary smith",
-            heading: "I HAD THE BEST WEEK EVER WITH MY FAMILY",
-            paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui."
-        })
+            figure.quote__box__image
+                img(src=args.img, alt="")
+                figcaption.quote__box__caption= args.name
+            .quote__box__text
+                .heading-sub.mt-1= args.heading || "Heading default"
+                .paragraph.mt-1= args.paragraph || "Paragraph default"
+    
+    .bg-video
+        video(autoplay muted loop).bg-video__content
+            source(src="../images/video.mp4", type="video/mp4")
+            source(src="../images/video.webm", type="video/webm")
+    //- .quote__inner
+    h2.heading-secondary.text-center.pb-5 WE MAKE PEOPLE GENUINELY HAPPY
+    +quote-box({
+        img: "../../images/nat-8.jpg",
+        name: "Mary smith",
+        heading: "I HAD THE BEST WEEK EVER WITH MY FAMILY",
+        paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui."
+    })
+    +quote-box({
+        img: "../../images/nat-9.jpg",
+        name: "Jack Willson",
+        heading: "I HAD THE BEST WEEK EVER WITH MY FAMILY",
+        paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui."
+    })
+    .quote_read.text-center
+        a(href="#").btn-outline.text-success Read all stories &rarr;
 section.booking
