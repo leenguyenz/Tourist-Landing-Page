@@ -152,3 +152,19 @@ section.quote
     .quote_read.text-center
         a(href="#").btn-outline.text-success Read all stories &rarr;
 section.booking
+    .booking-box
+        .booking-box__form
+            h2.heading-secondary.pb-4 Start booking now
+            form(action="" method="")
+                .form-group
+                    input(type="text" placeholder="Full name").form-control
+                .form-group
+                    input(type="email" placeholder="Email address").form-control
+                .form-group
+                    label
+                        input(type="radio" name="tour")
+                        | Small tour group
+                    label
+                        input(type="radio" name="tour")
+                        | Large tour group
+                button.btn.btn--success Next step &rarr;

@@ -1,0 +1,29 @@
+.booking-box{
+    width: 95%;
+    margin: 0 auto;
+    // background-image: url(../../images/nat-10.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    background: $color-white;
+    &__form{
+        width: 50%;
+        background: red;
+        padding: 5rem;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        label{
+            &:not(:last-child){
+                padding-right: 5rem;
+            }
+            input[type='radio']{
+                display: none;
+            }
+            &:after{
+                content:'';
+                width: 5px;
+                height: 5px;
+                background: #fff;
+            }
+        }
+    }
+}
