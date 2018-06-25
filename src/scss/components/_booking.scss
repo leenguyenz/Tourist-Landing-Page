@@ -1,29 +1,64 @@
-.booking-box{
-    width: 95%;
-    margin: 0 auto;
-    // background-image: url(../../images/nat-10.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-    background: $color-white;
-    &__form{
-        width: 50%;
-        background: red;
-        padding: 5rem;
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-        label{
-            &:not(:last-child){
-                padding-right: 5rem;
+.booking-box__form{
+    width: 50%;
+    padding: 6rem;
+    .form-label{
+        margin-left: 2rem;
+        margin-top: .7rem;
+        font-size: 1.6rem;
+        display: block;
+        transition: all 500ms ease;
+    }
+    .form-input {
+        border: 0;
+        border-bottom: 3px solid transparent;
+        transition: all .5s ease;
+        &:focus{
+            outline: none;
+            border-bottom: 3px solid $color-green-medium;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            &:invalid{
+                border-bottom: 3px solid $color-orange-dark;
             }
-            input[type='radio']{
-                display: none;
-            }
+        }
+        &:placeholder-shown + .form-label{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+    }
+
+    label{
+        cursor: pointer;
+        &:not(:last-child) {
+            padding-right: 5rem;
+        }
+        input[type="radio"] {
+            appearance: none;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            border: 4px solid $color-green-dark;
+            outline: none;
+            margin-right: .5rem;
+            position: relative;
+            top: 10px;
+            transition: all 0.2s linear;
             &:after{
-                content:'';
-                width: 5px;
-                height: 5px;
-                background: #fff;
+                content: '';
+                width: 1.3rem;
+                height: 1.3rem;
+                background: $color-green-dark;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                opacity: 0;
+                transition: opacity 0.2s ease;
             }
+        }
+        input[type="radio"]:checked:after {
+            opacity: 1;
         }
     }
 }

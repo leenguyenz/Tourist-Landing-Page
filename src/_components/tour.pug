@@ -128,7 +128,7 @@ section.quote
                 img(src=args.img, alt="")
                 figcaption.quote__box__caption= args.name
             .quote__box__text
-                .heading-sub.mt-1= args.heading || "Heading default"
+                .heading-sub.mt-4= args.heading || "Heading default"
                 .paragraph.mt-1= args.paragraph || "Paragraph default"
     
     .bg-video
@@ -157,14 +157,16 @@ section.booking
             h2.heading-secondary.pb-4 Start booking now
             form(action="" method="")
                 .form-group
-                    input(type="text" placeholder="Full name").form-control
+                    input(type="text" placeholder="Full name" required).form-input.form-control
+                    label.form-label Full name
                 .form-group
-                    input(type="email" placeholder="Email address").form-control
+                    input(type="email" placeholder="Email address" required).form-input.form-control
+                    label.form-label Email addres
                 .form-group
-                    label
-                        input(type="radio" name="tour")
-                        | Small tour group
-                    label
-                        input(type="radio" name="tour")
-                        | Large tour group
+                        label
+                            input(type="radio" name="tour")
+                            | Small tour group
+                        label
+                            input(type="radio" name="tour")
+                            | Large tour group
                 button.btn.btn--success Next step &rarr;
