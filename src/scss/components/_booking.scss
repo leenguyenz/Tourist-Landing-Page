@@ -12,6 +12,7 @@
         border: 0;
         border-bottom: 3px solid transparent;
         transition: all .5s ease;
+        border: none;
         &:focus{
             outline: none;
             border-bottom: 3px solid $color-green-medium;

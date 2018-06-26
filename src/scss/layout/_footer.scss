@@ -1,0 +1,37 @@
+.footer{
+    padding: 2rem;
+    @include clear-fix;
+    color: $color-white;
+    background: $color-main;
+    &__address{
+        width: 40%;
+        float: left;
+        margin: 20rem 0 5rem 0;
+        ul{
+            list-style: none;
+            border-top: 1px solid $color-white;
+            li{
+                float: left;
+                &:not(:last-child){
+                    padding-right:1rem;
+                }
+                a{
+                    text-transform: uppercase;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    &__brand{
+        width: 20%;
+        float: left;
+        text-align: center;
+        margin-top: 5rem;
+    }
+    &__info{
+        width: 40%;
+        float: left;
+        border-top: 1px solid $color-white;
+        margin: 20rem 0 5rem 0;
+    }
+}
