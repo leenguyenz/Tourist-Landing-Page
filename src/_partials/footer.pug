@@ -1,13 +1,20 @@
 footer.footer
-	.footer__address
-		ul
-			li: a(href="") company
-			li: a(href="") contact us
-			li: a(href="") carrers
-			li: a(href="") privacy policy
-			li: a(href="") terms
-	.footer__brand
-		img(src="../../images/logo-green-1x.png", alt="")
-	.footer__info
-		span 
-		| Built by JONAS SCHMEDTMANN for his online course ADVANCED CSS AND SASS. Copyright © by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
+	.footer__logo
+		img(src="../../images/logo-green-1x.png", alt="logo footer")
+	.row
+		.col-1-of-2
+			.footer__nav
+				ul
+					li: a(href="").link-footer company
+					li: a(href="").link-footer contact us
+					li: a(href="").link-footer carrers
+					li: a(href="").link-footer privacy policy
+					li: a(href="").link-footer terms
+		.col-1-of-2
+			.footer__copyright
+				p
+					| Built by 
+					a(href="").link-footer JONAS SCHMEDTMANN 
+					| for his online course 
+					a(href="").link-footer ADVANCED CSS AND SASS. 
+					| Copyright © by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!

@@ -24,14 +24,16 @@ h1,h2,h3,h4,h5,h6{
 }
 /*======link=======*/
 a:link{
-	color: $color-main;
+	// color: $color-main;
 	text-decoration: none;
 	outline: none;
 	text-transform: capitalize;
 }
-a:visited{color: $color-main;}
+
+// a:visited{color: $color-main;}
+
 a:hover{
-	color: $color-main;
+	// color: $color-main;
 	text-decoration: none;
 }
 a:active{color: $color-main;}
