@@ -1,10 +1,15 @@
-nav
-	ul.navbar
-		mixin nav-item(name)
-			li.nav-item
-				a.nav-link(href="#")= name
-		+nav-item("01 About natours")
-		+nav-item("02 Your benefits")
-		+nav-item("03 Popular tours")
-		+nav-item("04 Stories")
-		+nav-item("05 Book now")
+.nav-fixed
+	input(type="checkbox" class="nav-fixed__checkbox" id="nav-checkbox")
+	label(for="nav-checkbox").nav-fixed__button
+	.nav-icon
+	.nav-fixed__background
+	nav
+		ul.navbar
+			mixin nav-item(name)
+				li.nav-item
+					a.nav-link(href="#")= name
+			+nav-item("About natours")
+			+nav-item("Your benefits")
+			+nav-item("Popular tours")
+			+nav-item("Stories")
+			+nav-item("Book now")

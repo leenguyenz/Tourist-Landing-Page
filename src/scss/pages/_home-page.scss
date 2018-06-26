@@ -1,31 +1,36 @@
-//nav fixed
-.nav-fixed{
-    &__checkbox{
-        display: none;
-    }
-    &__background{
-        width: 6rem;
-        height: 6rem;
-        background-image: linear-gradient(to left bottom, rgba($color-green-light, 1), rgba($color-green-dark, 1));
-        border-radius: 50%;
-        position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
-        z-index: 999;
-        transform: scale(80);
-    }
-    &__button{
-        width: 7rem;
-        height: 7rem;
-        background-color: $color-white;
-        border-radius: $color-white;
-        position: fixed;
-        top: 6rem;
-        right: 6rem;
-        z-index: 9999;
-        cursor: pointer;
-        border-radius: 50%;
-    }
+// //nav fixed
+// .nav-fixed{
+//     &__checkbox{
+//         display: none;
+//     }
+//     &__background{
+//         width: 6rem;
+//         height: 6rem;
+//         background-image: linear-gradient(to left bottom, rgba($color-green-light, 1), rgba($color-green-dark, 1));
+//         border-radius: 50%;
+//         position: fixed;
+//         top: 6.5rem;
+//         right: 6.5rem;
+//         z-index: 999;
+//         transition: all .5s ease;
+//     }
+//     &__button{
+//         width: 7rem;
+//         height: 7rem;
+//         background-color: $color-white;
+//         border-radius: $color-white;
+//         position: fixed;
+//         top: 6rem;
+//         right: 6rem;
+//         z-index: 9999;
+//         cursor: pointer;
+//         border-radius: 50%;
+//         box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+//     }
+
+//     input[type="checkbox"]:checked ~ &__background {
+//         transform: scale(80);
+//     }
     
     // &:hover{
     //     .nav-icon::before{
@@ -70,7 +75,7 @@
     //     }
     // }
 
-}
+// }
 
 //banner
 .banner{
