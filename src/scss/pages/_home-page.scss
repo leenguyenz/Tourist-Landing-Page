@@ -1,58 +1,75 @@
 //nav fixed
 .nav-fixed{
-    width: 7rem;
-    height: 7rem;
-    background-color: $color-white;
-    border-radius: 50%;
-    position: fixed;
-    top: 5rem;
-    right: 5rem;
-    cursor: pointer;
-    transition: all 500ms ease;
-    z-index: 999;
-    &:hover{
-        .nav-icon::before{
-            top: 1.2rem;
-        }
-        .nav-icon::after{
-            top: -1.2rem;
-        }
+    &__checkbox{
+        display: none;
     }
-    &.bar-transform{
-        transition: all 500ms ease;
-        .nav-icon{
-            appearance: checkbox;
-            &:before,&:after{
-                top: 0;
-            }
-            &:before{
-                transform:rotate(45deg)
-            }
-            &:after{
-                transform:rotate(-45deg)
-            }
-        }
+    &__background{
+        width: 6rem;
+        height: 6rem;
+        background-image: linear-gradient(to left bottom, rgba($color-green-light, 1), rgba($color-green-dark, 1));
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        z-index: 999;
+        transform: scale(80);
     }
-    .nav-icon{
-        width: 3rem;
-        height: 0.2rem;
-        background: #000;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        &:before,&:after{
-            width: 3rem;
-            height: 0.2rem;
-            background: #000;
-            content: '';
-            top: 0.8rem;
-            position: absolute;
-        }
-        &:after{
-            top: -0.8rem;
-        }
+    &__button{
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-white;
+        border-radius: $color-white;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 9999;
+        cursor: pointer;
+        border-radius: 50%;
     }
+    
+    // &:hover{
+    //     .nav-icon::before{
+    //         top: 1.2rem;
+    //     }
+    //     .nav-icon::after{
+    //         top: -1.2rem;
+    //     }
+    // }
+
+    // &.bar-transform{
+    //     transition: all 500ms ease;
+    //     .nav-icon{
+    //         appearance: checkbox;
+    //         &:before,&:after{
+    //             top: 0;
+    //         }
+    //         &:before{
+    //             transform:rotate(45deg)
+    //         }
+    //         &:after{
+    //             transform:rotate(-45deg)
+    //         }
+    //     }
+    // }
+
+    // .nav-icon{
+    //     width: 3rem;
+    //     height: 0.2rem;
+    //     background: #000;
+    //     @include center-block;
+    //     &:before,&:after{
+    //         width: 3rem;
+    //         height: 0.2rem;
+    //         background: #000;
+    //         content: '';
+    //         top: 0.8rem;
+    //         position: absolute;
+    //     }
+    //     &:after{
+    //         top: -0.8rem;
+    //     }
+    // }
+
 }
 
 //banner
