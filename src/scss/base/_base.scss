@@ -17,7 +17,7 @@ html{
 	}
 
 	@include respond($phone) {
-		font-size: 30%; // 1rem = 4.8px
+		font-size: 40%; // 1rem = 4.8px
 	}
 	
 	@include respond($big-desktop) {
@@ -32,8 +32,11 @@ body{
 	font-size: $font-size-main;
 	line-height: $line-height-main;
 	text-decoration: none;
-	padding: 1.4rem;
+	padding: 3rem;
 	box-sizing: border-box;
+	@include respond($tab-port) {
+		padding: 0;
+	}
 }
 h1,h2,h3,h4,h5,h6{
 	text-transform: capitalize;
