@@ -8,7 +8,7 @@
 
     @include respond($tab-port) {
         margin-bottom: $gutter-vertical-small;
-        max-width: 50rem;
+        max-width: 60rem;
     }
 
     @include clear-fix;

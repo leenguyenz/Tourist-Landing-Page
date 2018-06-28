@@ -6,6 +6,10 @@
     }
 }
 
+.clear-fix{
+    overflow: auto;
+}
+
 @mixin center-block{
     position: absolute;
     top: 50%;
