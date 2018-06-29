@@ -3,6 +3,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     height: 52rem;
+
     &__side{
         position: absolute;
         top: 0;
@@ -67,9 +68,9 @@
             ul{
                 list-style: none;
                 li{
-                    padding-bottom: 2rem;
+                    padding: 2rem;
                     &:not(:last-child){
-                        border-bottom: 1px solid rgba($color-main,.3);
+                        border-bottom: 1px solid rgba($color-main,.2);
                     }
                 } 
             }
@@ -79,12 +80,12 @@
             font-weight: 700;
             font-size: 1.8rem;
             text-transform: uppercase;
-            padding-top: 8rem;
+            padding-top: 12rem;
         }
         &__price{
             color: $color-white;
             font-size: 5rem;
-            padding-top: 2rem;
+            padding-top: 5rem;
             margin-bottom: 10rem;
         }
         &--front{
@@ -114,5 +115,32 @@
     }
     &:hover &__side--back{
         transform: rotateY(0deg);
+    }
+
+    @include respond($tab-port) {
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        &__side{
+            position: static;
+            border-radius: 5px;
+            box-shadow: none;
+            &--back{
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                height: auto;
+                padding: 2rem;
+            }
+            &__text{
+                padding-top: 5rem;
+            }
+            &__price{
+                padding-top: 2rem;
+                margin-bottom: 3rem;
+            }
+        }
+        &__footer{
+            text-transform: uppercase;
+        }
     }
 }
