@@ -35,6 +35,11 @@
     background-color: $bg-gray;
     padding: 20rem 0;
     margin-top: -15vh;
+
+    @include respond($tab-port){
+        margin-bottom: 25rem;
+        padding-top: 15rem;
+    }
 }
 
 .benefits{
@@ -51,17 +56,23 @@
     & > * {
         transform: skewY(7deg);
     }
+    @include respond($tab-port){
+        margin-top: -33rem;
+    }
 }
 
 .popular{
     padding: 20rem 0;
     background: $bg-gray;
-    // margin-top: -5rem;
+    margin-top: -10rem;
 }
 
 .quote{
     position: relative;
     padding: 15rem 0;
+    @include respond($tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .booking{
