@@ -129,7 +129,7 @@ section.quote
                 img(src=args.img, alt="")
                 figcaption.quote__box__caption= args.name
             .quote__box__text
-                .heading-sub.mt-4= args.heading || "Heading default"
+                .heading-sub= args.heading || "Heading default"
                 .paragraph.mt-1= args.paragraph || "Paragraph default"
     
     .bg-video
@@ -167,8 +167,8 @@ section.booking
                 .form-group
                         label
                             input(type="radio" name="tour")
-                            | Small tour group
+                            | Small tour
                         label
                             input(type="radio" name="tour")
-                            | Large tour group
+                            | Large tour
                 button.btn.btn--success Next step &rarr;

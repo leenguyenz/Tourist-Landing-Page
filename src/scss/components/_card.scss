@@ -121,6 +121,7 @@
         height: auto;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background: $color-white;
         &__side{
             position: static;
             border-radius: 5px;
@@ -138,9 +139,6 @@
                 padding-top: 2rem;
                 margin-bottom: 3rem;
             }
-        }
-        &__footer{
-            text-transform: uppercase;
         }
     }
 }

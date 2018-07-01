@@ -9,8 +9,18 @@
     transform: skewX(-12deg);
     margin-bottom: 10rem;
     padding: 3rem;
+    @include respond($tab-port) {
+        width: 88%;
+    }
+    @include respond($phone) {
+        transform: skewX(0deg);
+    }
+
     & > *{
         transform: skewX(12deg);
+        @include respond($phone) {
+            transform: skewX(0deg);
+        }
     }
     &__image{
         width: 18rem;
@@ -38,6 +48,12 @@
         transition: all 500ms ease;
         opacity: 0;
         backface-visibility: hidden;
+    }
+    &__text{
+        margin-top: 3rem;
+        @include respond($tab-port) {
+            margin-top: 2rem;
+        }
     }
     &:hover{
         .quote__box__image{
