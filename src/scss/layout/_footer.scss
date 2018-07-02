@@ -2,18 +2,9 @@
     padding: 2rem;
     color: $color-white;
     background: lighten($color-black,20%); //#333
+    text-align: center;
     &__logo{
-        text-align: center;
-        margin: 5rem 0;
-        @include respond($tab-port) {
-            margin: 3rem 0;
-        }
-        img{
-            width: 12rem;
-            @include respond($tab-port) {
-                width: 10rem;
-            }
-        }
+        margin-bottom: 2rem;
     }
     &__nav{
         border-top: 1px solid $color-white;

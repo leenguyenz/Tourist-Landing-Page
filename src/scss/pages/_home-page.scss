@@ -38,7 +38,10 @@
 
     @include respond($tab-port){
         margin-bottom: 25rem;
-        padding-top: 15rem;
+        padding-top: 25rem;
+    }
+    @include respond($phone){
+        padding-top: 30rem;
     }
 }
 
